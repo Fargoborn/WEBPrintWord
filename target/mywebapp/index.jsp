@@ -8,11 +8,7 @@
 </head>
 <body>
 <header>
-    <a href="/"><img alt="Логотип" id="top-image" src="#"/></a>
-    <div id="user-panel">
-        <a href="#"><img alt="Иконка юзера" scr=""/></a>
-        <a href="javascript:void(0);">[Панель для юзера]</a>
-    </div>
+    <a href="img/logo.png"><img alt="Логотип" id="top-image" src="img/logo.png"/></a>
 </header>
 <div id="main">
     <aside class="leftAside">
