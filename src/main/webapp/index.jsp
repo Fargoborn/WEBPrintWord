@@ -1,3 +1,4 @@
+<%@ page import="org.mycompany.myname.Action_w" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,13 +16,14 @@
         <h2>Меню команд</h2>
         <form>
             <p>
-                <button class="button" id="button_w" formaction="">
+                <% out.print("Today is:"+java.util.Calendar.getInstance().getTime()); %>
+                <button class="button" name="button_w" value="button_w" formaction="action_w" method="post">
                     Выбрать источник
                 </button>
-                <button class="button" id="button_sh">
+                <button class="button" name="button_sh" value="button_sh">
                     Выбрать шаблон
                 </button>
-                <button class="button" id="button_p">
+                <button class="button" name="button_p" value="button_p">
                     Печать
                 </button>
         </form>

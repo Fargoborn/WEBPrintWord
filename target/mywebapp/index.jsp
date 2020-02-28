@@ -1,10 +1,11 @@
+<%@ page import="org.mycompany.myname.Action_w" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Главная страница блога</title>
+    <title>Сервис печати в шаблоны WORD</title>
 </head>
 <body>
 <header>
@@ -12,45 +13,33 @@
 </header>
 <div id="main">
     <aside class="leftAside">
-        <h2>Темы статей</h2>
-        <ul>
-            <li><a href="#">Тема 1</a></li>
-            <li><a href="#">Тема 2</a></li>
-            <li><a href="#">Тема 3</a></li>
-            <li><a href="#">Тема 3</a></li>
-
-        </ul>
+        <h2>Меню команд</h2>
+        <form>
+            <p>
+                <% out.print("Today is:"+java.util.Calendar.getInstance().getTime()); %>
+                <button class="button" name="button_w" value="button_w" formaction="action_w" method="post">
+                    Выбрать источник
+                </button>
+                <button class="button" name="button_sh" value="button_sh">
+                    Выбрать шаблон
+                </button>
+                <button class="button" name="button_p" value="button_p">
+                    Печать
+                </button>
+        </form>
     </aside>
     <section>
-        <article>
-            <h1>Статья</h1>
-            <div class="text-article">
-                Текст статьи
-            </div>
-            <div class="fotter-article">
-                <span class="autor">Автор статьи: <a href="#">автор</a></span>
-                <span class="read"><a href="javascript:void(0);">Читать...</a></span>
-                <span class="date-article">Дата статьи: 20.12.2012</span>
-            </div>
-        </article>
-        <article>
-            <h1>Статья</h1>
-            <div class="text-article">
-                Текст статьи
-            </div>
-            <div class="fotter-article">
-                <span class="autor">Автор статьи: <a href="#">автор</a></span>
-                <span class="read"><a href="javascript:void(0);">Читать...</a></span>
-                <span class="date-article">Дата статьи: 20.12.2012</span>
-
-            </div>
-        </article>
+        <textarea class="text-area" id="url_w">
+            Путь к источнику данных
+        </textarea>
+        <textarea class="text-area" id="url_sh">
+            Путь к шаблону
+        </textarea>
     </section>
 </div>
 <footer>
     <div>
         <span>Тестовое приложение JAVA EE</span>
-        <span><a target="_blanc" href="http://onedeveloper.ru/search?w=Java">Уроки по JavaEE</a></span>
     </div>
 </footer>
 </body>
